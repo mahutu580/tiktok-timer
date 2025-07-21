@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Bar Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>tiktok 支援タイマー</h1>
+    <div class="preset-buttons" >
+        <button id="preset-ad">広告視聴(15秒)</button>
+        <button id="preset-wait">広告５件待ち（５分）</button>
+        <button id="preset-check">動画定期チェック(3分)</button>
+        <button id="preset-receive">受け取り待ち(20分)</button>
+    </div>
+
+    <div>
+        <input type="number" id="time-input" placeholder="秒数を入力">
+        <button id="start-button">スタート</button>
+        <button id="stop-button">ストップ</button>
+    </div>
+
+    <audio id="alarm-sound" src="alarm.mp3" preload="auto"></audio>
+
+    <div id="timer-bar-container">
+        <div id="ticks-container"></div>
+    </div>
+    
+    <p>残り時間: <span id="time-display">0</span></p>
+    <script src="script.js"></script>
+     （このコメント行は、サイトの見た目には一切影響しません*）
+</body>
+</html>
+

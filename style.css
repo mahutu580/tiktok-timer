@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#timer-bar-container {
+    width: 500px;
+    height: 30px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* --- 以下を追加 --- */
+
+/* 目盛りを横に並べるための設定 */
+#ticks-container {
+    display: flex; /* 子要素を横に並べる */
+    width: 100%;
+    height: 100%;
+}
+
+/* 目盛り一つひとつのスタイル */
+.tick {
+    flex-grow: 1; /* 親要素の幅に合わせて均等に伸びる */
+    height: 100%;
+    background-color: #4CAF50; /* 緑色 */
+    border-right: 2px solid #fff; /* 目盛り間の白い線 */
+    transition: background-color 0.5s; /* 色が滑らかに変わる設定 */
+}
+
+/* 最後の目盛りの右線は不要なので消す */
+.tick:last-child {
+    border-right: none;
+}
+
+/* 消えた目盛りのスタイル */
+.tick.hidden {
+    background-color: #eee; /* 背景色と同じにして見えなくする */
+}
+
+.preset-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px; /* ボタン間の隙間 */
+}
+
+.preset-buttons button {
+    background-color: #5dadec;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#stop-button {
+    background-color: #e74c3c; /* 赤色 */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
