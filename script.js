@@ -14,7 +14,7 @@ const alarmSound = document.getElementById('alarm-sound');
 let countdown;
 let remainingTime;
 let isTimerRunning = false;
-let totalTicks = 50; // 目盛りの総数
+let totalTicks = 50; // 目盛りの総数だよ
 
 // 3. 関数を定義する
 
